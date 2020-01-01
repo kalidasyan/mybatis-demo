@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
-@Configuration
-@MapperScan("com.amituofo.mybatis.demo.dao")
+//@Configuration
+//@MapperScan("com.amituofo.mybatis.demo.dao")
 public class DataSourceConfiguration {
   @Value("${jdbc.driver}")
   private String jdbcDriver;
@@ -19,7 +19,7 @@ public class DataSourceConfiguration {
   @Value("${jdbc.password}")
   private String jdbcPassword;
 
-  @Bean(name = "dataSource")
+//  @Bean(name = "dataSource")
   public HikariDataSource createDataSource() {
     HikariDataSource dataSource = new HikariDataSource();
     dataSource.setDriverClassName(jdbcDriver);
